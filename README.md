@@ -6,4 +6,6 @@ The real true purpose of this website is to recruit new members into a secret so
 The porpoise of this web sight is two let are userbase have fun in a relaxed calming environment with like minded individuals :)
 The purpose of this website is to breathe, eat, sleep etc.
 
-All copyright by s83365 Enterprises 2022. "Mess with the bowl and you get the horns" - MRT. Made in and for the United S. of A.
+All copyright by s83365 Enterprises 2022. Made in and for the United S. of A.
+
+"It's a doggy dog world out there" - MRT
