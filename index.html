@@ -149,23 +149,23 @@
         <img src="https://everything-pr.com/wp-content/uploads/2011/01/Myspace-everything-pr.gif" alt="gif test" style="width:100%">
         <div class="slideCaption">Test #3</div>
       </div>
-      <script>
-        var activeSlide = 0;
-        changeSlide()
-        function changeSlide() {
-          var i = 0;
-          var slides = document.getElementsByClassName("slides");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          activeSlide++;
-          if (activeSlide > slides.length) {
-            activeSlide = 1;
-          }
-        slides[activeSlide-1].style.display = "block";
-        setTimeout(changeSlide, 2000);
-      </script>
     </div>
+    <script>
+      var activeSlide = 0;
+      changeSlide()
+      function changeSlide() {
+        var i = 0;
+        var slides = document.getElementsByClassName("slides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        activeSlide++;
+        if (activeSlide > slides.length) {
+          activeSlide = 1;
+        }
+      slides[activeSlide-1].style.display = "block";
+      setTimeout(changeSlide, 2000);
+    </script>
     <p class="copyright">© 2022 Real Hollywood Gangsta Money Trench Hustlas Studios, Incorporated</p>
     <p class="copyright"><em>"It's a doggy dog world out there" - M. R. T. 2022</em></p>
   </body>
