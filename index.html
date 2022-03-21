@@ -59,6 +59,45 @@
         background-color:#090a64;
         padding:20px 10px;
       }
+      .special {
+        /* Maybe add more font properties (ideas: changing color, shaking text) */
+        font-family:fantasy;
+      }
+      * {box-sizing:border-box}
+      .slideshow {
+        max-width:1000px;
+        position:relative;
+        margin:auto;
+      }
+      .slides {
+        display: none;
+      }
+      .slideCaption {
+        color:#f2f2f2;
+        font-size:15px;
+        padding:8px 12px;
+        position:absolute;
+        bottom:8px;
+        width:100%;
+        text-align:center;
+      }
+      .slideIndex {
+        color:#f2f2f2;
+        font-size:12px;
+        padding:8px 12px;
+        position:absolute;
+        top:0;
+      }
+      .fade {
+        -webkit-animation-name:fade;
+        -webkit-animation-duration:1.5s;
+        animation-name:fade;
+        animation-duration:1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {opacity:.4}
+        to {opacity:1}
+      }
     </style>
   </head>
   <body>
@@ -86,7 +125,7 @@
       <p>As for other stuff I've been using computers for 8-9 years, playing guitar for 5, lifting weights for about 2, driving for almost 1. I have only ever used Windows and Mac for the most part, but I do have a Chromebook that I installed Debian (iirc) on which I haven't figured out how to use yet.</p>
       <p>I have a 4-point-something GPA (3.8-something cumulative I'm pretty sure) and absolutely no work experience but I do have "prospects" such as my big ole brain and scattered knowledge in various subjects (I'm sort of a jack of all trades, master of none but once I figure out what I'm gonna do, that will change). I'm hoping to go to college for some sort of tech/engineering job (probably Software Engineering) at a university where I can get my Bachelor's for cheap (so most likely in-state). My dream colleges (read: pipe dreams) are Carnegie Mellon, M.I.T., maybe Amherst.</p>
       <p>My favorite video game is Counter Strike, my favorite movie is Taxi Driver, my favorite band is The Smiths, my favorite book is probably either Fear and Loathing in Las Vegas or Kafka's Metamorphosis, my favorite comedian is Norm MacDonald or Tom Green, my favorite lift is the Overhead Press, my favorite car is the Lotus Esprit SE Turbo or the Toyota Supra (Mk3), probably not going to put anything for politics, and my favorite coding language is Python.</p>
-      <h2><strong>I HOPE YOU ENJOY THIS WEBSITE</strong></h2>
+      <h2 class="special"><strong>I HOPE YOU ENJOY THIS WEBSITE</strong></h2>
       <h1 id="contact" class="header">Contact</h1>
       <ul>
         <li>Tell me how much you love the 'site at newsupplementjuic3d@gmail.com (ask about pre-ordering my new supplement as well; available in both suppository and liquid form. Shipping only available in China for now but we probably will start expanding to other East Asian countries in ~2.5-3 years)</li>
@@ -95,9 +134,21 @@
       <p>I'm available to grapple (I'm a certified black belt in BJJ) as well between the hours of 6pm and 2am but only in North and South America.</p>
     </div>
     <div class="slideshow">
-      <img src="https://thumbs.dreamstime.com/b/my-space-social-media-logo-vector-format-available-illustrator-ai-myspace-social-media-logo-129293687.jpg" alt="jpg test" class="slides">
-      <img src="https://cdn.freebiesupply.com/logos/large/2x/myspace-logo-png-transparent.png" alt="png test" class="slides">
-      <img src="https://everything-pr.com/wp-content/uploads/2011/01/Myspace-everything-pr.gif" alt="gif test" class="slides">
+      <div class="slides fade">
+        <div class="slideIndex">1/3</div>
+        <img src="https://thumbs.dreamstime.com/b/my-space-social-media-logo-vector-format-available-illustrator-ai-myspace-social-media-logo-129293687.jpg" alt="jpg test" style="width:100%">
+        <div class="slideCaption">Test #1</div>
+      </div>
+      <div class="slides fade">
+        <div class="slideIndex">2/3</div>
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/myspace-logo-png-transparent.png" alt="png test" style="width:100%">
+        <div class="slideCaption">Test #2</div>
+      </div>
+      <div class="slides fade">
+        <div class="slideIndex">3/3</div>
+        <img src="https://everything-pr.com/wp-content/uploads/2011/01/Myspace-everything-pr.gif" alt="gif test" style="width:100%">
+        <div class="slideCaption">Test #3</div>
+      </div>
       <script>
         var activeSlide = 0;
         changeSlide()
