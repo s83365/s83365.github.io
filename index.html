@@ -1,3 +1,10 @@
+/*
+issues:
+- afaik you need images with the same height for them to look any good in the slideshow
+- Dropdown stuff is pretty poorly named / could probably be optimized a little bit more
+- Website looks awful, need to take more inspiration from stuff I find online that actually looks good
+- slideshow fadeout looks kinda wonk
+*/
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -98,6 +105,41 @@
         from {opacity:.4}
         to {opacity:1}
       }
+      .dropdownButton {
+        background-color:#3498db;
+        color:white;
+        padding:16px;
+        font-size:16px;
+        border:none;
+        cursor:pointer;
+      }
+      .dropdownButton:hover, .dropdownButton:focus {
+        background-color:#2980b9;
+      }
+      .dropdown {
+        position:relative;
+        display:inline-block;
+      }
+      .dropdownOptions {
+        display:none;
+        position:absolute;
+        background-color:#f1f1f1;
+        min-width:160px;
+        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index:1;
+      }
+      .dropdownOptions a {
+        color:black;
+        padding:12px 16px;
+        text-decoration:none;
+        display:block;
+      }
+      .dropdownOptions a:hover {
+        background-color:#dddddd;
+      }
+      .show {
+        display:block;
+      }
     </style>
   </head>
   <body>
@@ -146,6 +188,33 @@
           }
         </script>
       </div>
+      
+      <div class="dropdown">
+        <button onclick="dropdownMenu()" class="dropdownButton">Dropdown</button>
+        <div id="dropdownMenu" class="dropdownOptions">
+          <a href="#">About This Website</a>
+          <a href="#">About Me</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <script>
+        function dropdownMenu() {
+          document.getElementById("dropdownMenu").classList.toggle("show");
+        }
+        window.onclick=function(event) {
+          if(!event.target.matches('.dropDownButton')) {
+            var dropdowns=document.getElementByClassName("dropdownOptions");
+            var i;
+            for(i=0; i<dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if(openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+      </script>
+      
       <h1 id="about" class="header">About Me/this website</h1>
       <h2>What is MySpace 2?</h2>
       <p> The purpose of this website is to intertain the audeince of the web site...if you don't like it / have any qualms with me or my son -- yes I do live in Northern Missouri, and, yes, we can slap box. No holds barred, 3 rounds, no items. </p>
