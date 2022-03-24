@@ -112,6 +112,40 @@
     <div class="container">
       <p>Bookmark this page and refresh constantly for possible <strong>BREAKING NEWS</strong> updates.</p>
       <p>Newest update (as of RIGHT NOW): <em>Ukraine and Russia got ice cream and became friends again, also Taiwan and China were never fighting it was all just a big misunderstanding like in an old sitcom. Thank you for being a friend.</em></p>
+      <div class="slideshow">
+      <div class="slides fade">
+        <div class="slideIndex">1/3</div>
+        <img src="https://thumbs.dreamstime.com/b/my-space-social-media-logo-vector-format-available-illustrator-ai-myspace-social-media-logo-129293687.jpg" alt="jpg test" style="width:100%; height:300px; overflow:none">
+        <div class="slideCaption">Test #1</div>
+      </div>
+      <div class="slides fade">
+        <div class="slideIndex">2/3</div>
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/myspace-logo-png-transparent.png" alt="png test" style="width:100%; height:300px; overflow:none">
+        <div class="slideCaption">Test #2</div>
+      </div>
+      <div class="slides fade">
+        <div class="slideIndex">3/3</div>
+        <img src="https://everything-pr.com/wp-content/uploads/2011/01/Myspace-everything-pr.gif" alt="gif test" style="width:100%; height:300px; overflow:none">
+        <div class="slideCaption">Test #3</div>
+      </div>
+        <script>
+          var activeSlide = 0;
+          changeSlide()
+          function changeSlide() {
+            var i = 0;
+            var slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            activeSlide++;
+            if (activeSlide > slides.length) {
+              activeSlide = 1;
+            }
+          slides[activeSlide-1].style.display = "block";
+          setTimeout(changeSlide, 2000);
+          }
+        </script>
+      </div>
       <h1 id="about" class="header">About Me/this website</h1>
       <h2>What is MySpace 2?</h2>
       <p> The purpose of this website is to intertain the audeince of the web site...if you don't like it / have any qualms with me or my son -- yes I do live in Northern Missouri, and, yes, we can slap box. No holds barred, 3 rounds, no items. </p>
@@ -133,40 +167,6 @@
       </ul>
       <p>Hit me up at the above e-mail, but only if you are 1000% serious about boxing. I am 5'4" 90lbs (50 cm and 45 kg for you third worlders out there) but despite my size I've taken out guys 2 feet taller and 300 pounds heavier than me. If you believe you're up to the challenge I'll fly absolutely anywhere in the world to come fight you. Be forewarned: I will not be held responsible for you or your family's safety (or lack thereof) before, during, or after the fight.</p>
       <p>I'm available to grapple (I'm a certified black belt in BJJ) as well between the hours of 6pm and 2am but only in North and South America.</p>
-    </div>
-    <div class="slideshow">
-      <div class="slides fade">
-        <div class="slideIndex">1/3</div>
-        <img src="https://thumbs.dreamstime.com/b/my-space-social-media-logo-vector-format-available-illustrator-ai-myspace-social-media-logo-129293687.jpg" alt="jpg test" style="width:100%"; height:300px; overflow:none>
-        <div class="slideCaption">Test #1</div>
-      </div>
-      <div class="slides fade">
-        <div class="slideIndex">2/3</div>
-        <img src="https://cdn.freebiesupply.com/logos/large/2x/myspace-logo-png-transparent.png" alt="png test" style="width:100%; height:300px; overflow:none">
-        <div class="slideCaption">Test #2</div>
-      </div>
-      <div class="slides fade">
-        <div class="slideIndex">3/3</div>
-        <img src="https://everything-pr.com/wp-content/uploads/2011/01/Myspace-everything-pr.gif" alt="gif test" style="width:100%; height:300px; overflow:none">
-        <div class="slideCaption">Test #3</div>
-      </div>
-      <script>
-        var activeSlide = 0;
-        changeSlide()
-        function changeSlide() {
-          var i = 0;
-          var slides = document.getElementsByClassName("slides");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          activeSlide++;
-          if (activeSlide > slides.length) {
-            activeSlide = 1;
-          }
-        slides[activeSlide-1].style.display = "block";
-        setTimeout(changeSlide, 2000);
-        }
-      </script>
     </div>
     <div class="copyright">
       <p>© 2022 Real Hollywood Gangsta Money Trench Hustlas Studios, Incorporated</p>
