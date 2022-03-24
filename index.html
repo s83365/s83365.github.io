@@ -143,6 +143,23 @@
         </div>
       </div>
     </div>
+    <script>
+      function dropdownMenu() {
+        document.getElementById("dropdownMenu").classList.toggle("show");
+      }
+      window.onclick=function(event) {
+        if(!event.target.matches('.dropDownButton')) {
+          var dropdowns=document.getElementByClassName("dropdownOptions");
+          var i;
+          for(i=0; i<dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if(openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
       <p>Bookmark this page and refresh constantly for possible <strong>BREAKING NEWS</strong> updates.</p>
       <p>Newest update (as of RIGHT NOW): <em>Ukraine and Russia got ice cream and became friends again, also Taiwan and China were never fighting it was all just a big misunderstanding like in an old sitcom. Thank you for being a friend.</em></p>
       <p>Older update: <em>I live on a beautiful beachfront property on a private island. The following slideshow contains only some of the scenery I'm surrounded by every single day. Are you jealous yet? Try to go to sleep tonight knowing I live like a God on Earth and people like you only exist to make me marginally richer than I already am.</em></p>
@@ -162,6 +179,23 @@
         <img src="https://images.wallpaperscraft.com/image/single/beach_tropics_sea_sand_palm_trees_sunset_84729_1280x720.jpg" alt="awsome beech" style="width:100%; height:50%; overflow:none">
         <div class="slideCaption">My backyard at night</div>
     </div>
+    <script>
+      var activeSlide = 0;
+      changeSlide()
+      function changeSlide() {
+        var i = 0;
+        var slides = document.getElementsByClassName("slides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        activeSlide++;
+        if (activeSlide > slides.length) {
+          activeSlide = 1;
+        }
+      slides[activeSlide-1].style.display = "block";
+      setTimeout(changeSlide, 2000);
+      }
+    </script>
     <div class="container">
       <h1 id="about" class="header">About Me/this website</h1>
       <h2>What is MySpace 2?</h2>
@@ -189,39 +223,5 @@
       <p>© 2022 Real Hollywood Gangsta Money Trench Hustlas Studios, Incorporated</p>
       <p class="quote">"It's a doggy dog world out there" - M. R. T. 2022</p>
     </div>
-    <script>
-      function dropdownMenu() {
-        document.getElementById("dropdownMenu").classList.toggle("show");
-      }
-      window.onclick=function(event) {
-        if(!event.target.matches('.dropDownButton')) {
-          var dropdowns=document.getElementByClassName("dropdownOptions");
-          var i;
-          for(i=0; i<dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if(openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
-      }
-    </script>
-    <script>
-      var activeSlide = 0;
-      changeSlide()
-      function changeSlide() {
-        var i = 0;
-        var slides = document.getElementsByClassName("slides");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        activeSlide++;
-        if (activeSlide > slides.length) {
-          activeSlide = 1;
-        }
-      slides[activeSlide-1].style.display = "block";
-      setTimeout(changeSlide, 2000);
-      }
-    </script>
   </body>
 </html>
