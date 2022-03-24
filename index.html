@@ -48,9 +48,6 @@ issues:
         background-color:dodgerblue;
         color:white;
       }
-      .header right {
-        float:right;
-      }
       @media screen and (max width:500px) {
         .header a {
           float:none;
@@ -145,10 +142,13 @@ issues:
   <body>
     <div class="header" id="index">
       <a href="#index" class="logo">MySpace 2</a>
-      <div class="header-right">
-        <a class="active" href="#index">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <div class="dropdown">
+        <button onclick="dropdownMenu()" class="dropdownButton">Dropdown</button>
+        <div id="dropdownMenu" class="dropdownOptions">
+          <a href="#index">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </div>
     <div class="container">
@@ -170,51 +170,6 @@ issues:
         <img src="https://everything-pr.com/wp-content/uploads/2011/01/Myspace-everything-pr.gif" alt="gif test" style="width:100%; height:50%; overflow:none">
         <div class="slideCaption">Test #3</div>
       </div>
-        <script>
-          var activeSlide = 0;
-          changeSlide()
-          function changeSlide() {
-            var i = 0;
-            var slides = document.getElementsByClassName("slides");
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-            }
-            activeSlide++;
-            if (activeSlide > slides.length) {
-              activeSlide = 1;
-            }
-          slides[activeSlide-1].style.display = "block";
-          setTimeout(changeSlide, 2000);
-          }
-        </script>
-      </div>
-      
-      <div class="dropdown">
-        <button onclick="dropdownMenu()" class="dropdownButton">Dropdown</button>
-        <div id="dropdownMenu" class="dropdownOptions">
-          <a href="#">About This Website</a>
-          <a href="#">About Me</a>
-          <a href="#">Contact</a>
-        </div>
-      </div>
-      <script>
-        function dropdownMenu() {
-          document.getElementById("dropdownMenu").classList.toggle("show");
-        }
-        window.onclick=function(event) {
-          if(!event.target.matches('.dropDownButton')) {
-            var dropdowns=document.getElementByClassName("dropdownOptions");
-            var i;
-            for(i=0; i<dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if(openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
-          }
-        }
-      </script>
-      
       <h1 id="about" class="header">About Me/this website</h1>
       <h2>What is MySpace 2?</h2>
       <p> The purpose of this website is to intertain the audeince of the web site...if you don't like it / have any qualms with me or my son -- yes I do live in Northern Missouri, and, yes, we can slap box. No holds barred, 3 rounds, no items. </p>
@@ -241,5 +196,39 @@ issues:
       <p>© 2022 Real Hollywood Gangsta Money Trench Hustlas Studios, Incorporated</p>
       <p class="quote">"It's a doggy dog world out there" - M. R. T. 2022</p>
     </div>
+    <script>
+      function dropdownMenu() {
+        document.getElementById("dropdownMenu").classList.toggle("show");
+      }
+      window.onclick=function(event) {
+        if(!event.target.matches('.dropDownButton')) {
+          var dropdowns=document.getElementByClassName("dropdownOptions");
+          var i;
+          for(i=0; i<dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if(openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+      var activeSlide = 0;
+      changeSlide()
+      function changeSlide() {
+        var i = 0;
+        var slides = document.getElementsByClassName("slides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        activeSlide++;
+        if (activeSlide > slides.length) {
+          activeSlide = 1;
+        }
+      slides[activeSlide-1].style.display = "block";
+      setTimeout(changeSlide, 2000);
+      }
+    </script>
   </body>
 </html>
