@@ -41,8 +41,32 @@
         padding:20px 10px;
       }
       .special {
-        /* Maybe add more font properties (ideas: changing color, shaking text) */
+        margin:0;
+        padding:0;
         font-family:fantasy;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        font-size:2.5em;
+        color:rgb(4,110,4);
+      }
+      .special:hover {
+        animation:shake 0.8s;
+      }
+      @keyframes shake {
+        0% {
+          transform:translateX(0);
+        }
+        25% {
+          transform:translateX(25px);
+        }
+        50% {
+          transform:translateX(-25px);
+        }
+        100% {
+          transform:translateX(0px);
+        }
       }
       * {box-sizing:border-box}
       .slideshow {
@@ -203,13 +227,13 @@
       <h2 class="special"><strong>I HOPE YOU ENJOY THIS WEBSITE</strong></h2>
       <h1 id="contact" class="header">Contact</h1>
       <ul>
-        <li>Tell me how much you love the 'site at newsupplementjuic3d@gmail.com (ask about pre-ordering my new supplement as well; available in both suppository and liquid form. Shipping only available in China for now but we probably will start expanding to other East Asian countries in ~2.5-3 years)</li>
+        <li>Tell me how much you love the 'site at newsupplementjuic3d@gmail.com <strong>[YES THIS IS MY REAL EMAIL]</strong> (ask about pre-ordering my new supplement as well; available in both suppository and liquid form. Shipping only available in China for now but we probably will start expanding to other East Asian countries in ~2.5-3 years)</li>
       </ul>
       <p>Hit me up at the above e-mail, but only if you are 1000% serious about boxing. I am 5'4" 90lbs (50 cm and 45 kg for you third worlders out there) but despite my size I've taken out guys 2 feet taller and 300 pounds heavier than me. If you believe you're up to the challenge I'll fly absolutely anywhere in the world to come fight you. Be forewarned: I will not be held responsible for you or your family's safety (or lack thereof) before, during, or after the fight.</p>
       <p>I'm available to grapple (I'm a certified black belt in BJJ) as well between the hours of 6pm and 2am but only in North and South America.</p>
     <div>
     <div class="copyright">
-      <p>© 2022 Real Hollywood Gangsta Money Trench Hustlas Studios, Incorporated</p>
+      <p>© 2022 Real Hollywood Gang$ta Money Trench Hu$tlazz Studios, Inc.</p>
       <p class="quote">"It's a doggy dog world out there" - M. R. T. 2022</p>
     </div>
   </body>
